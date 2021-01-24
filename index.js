@@ -79,7 +79,7 @@ class KeyvReplitDb {
         const { store } = this.opts;
         return store.list();
       }
-    }
+    };
   }
 }
 

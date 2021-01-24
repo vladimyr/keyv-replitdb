@@ -22,7 +22,6 @@ keyvTestSuite(test, Keyv, createStore);
 
 test.serial('store.list() returns a Promise', async t => {
   const store = createStore();
-  const keyv = new Keyv({ store });
   const returnValue = store.list();
   t.true(returnValue instanceof Promise);
   await returnValue;
@@ -30,8 +29,8 @@ test.serial('store.list() returns a Promise', async t => {
 
 test.serial('store.list() gets all keys', async t => {
   const store = createStore();
-  const keyv = new Keyv({ store });
   t.deepEqual(await store.list(), []);
+  const keyv = new Keyv({ store });
   await keyv.set('foo', 'bar');
   await keyv.set('fizz', 'buzz');
   const actual = await store.list();

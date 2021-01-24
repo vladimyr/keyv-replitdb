@@ -19,7 +19,7 @@ test.before(async function () {
 
 const createStore = () => new KeyvReplitDb(replitDbUrl);
 
-test.serial('list() returns a Promise', async t => {
+test.serial('.list() returns a Promise', async t => {
   const store = createStore();
   const keyv = new Keyv({ store });
   const returnValue = keyv.list();

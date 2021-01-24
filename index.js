@@ -76,8 +76,12 @@ class KeyvReplitDb {
   static extend(base) {
     return class extends base {
       list() {
-        const { store } = this.opts;
-        return store.list();
+        const { namespace, store } = this.opts;
+        return store.list().then(keys => {
+          if (!namespace) return keys;
+          const reNamespace = new RegExp(`^${namespace}:`);
+          return keys.map(key => key.replace(reNamespace, ''));
+        });
       }
     };
   }

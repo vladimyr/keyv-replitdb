@@ -34,9 +34,7 @@ test.serial('.list() gets all keys', async t => {
   await keyv.set('foo', 'bar');
   await keyv.set('fizz', 'buzz');
   const actual = await keyv.list();
-  const expected = ['foo', 'fizz'].map(key => {
-    return `${keyv.opts.namespace}:${key}`;
-  });
+  const expected = ['foo', 'fizz'];
   t.deepEqual(actual.sort(), expected.sort());
 });
 

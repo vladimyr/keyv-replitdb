@@ -1,0 +1,60 @@
+{
+  "name": "keyv-replitdb",
+  "version": "0.0.0",
+  "description": "Repl.it Database storage adapter for Keyv",
+  "keywords": [
+    "replit",
+    "keyv",
+    "storage",
+    "adapter",
+    "key",
+    "value",
+    "store",
+    "cache"
+  ],
+  "homepage": "https://github.com/vladimyr/keyv-replitdb",
+  "bugs": {
+    "url": "https://github.com/vladimyr/keyv-replitdb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vladimyr/keyv-replitdb.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Dario Vladovic",
+    "email": "d.vladimyr+dev@gmail.com",
+    "url": "https://github.com/vladimyr"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "proxy": "micro dev-api.js",
+    "test": "ava"
+  },
+  "config": {
+    "replitUrl": "https://keyv-replitdb.vladimyr1.repl.co"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "p-catch-if": "^2.1.0",
+    "p-map": "^4.0.0"
+  },
+  "devDependencies": {
+    "@keyv/test-suite": "^1.6.11",
+    "@vladimyr/eslint-config": "*",
+    "ava": "^3.15.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-semistandard": "^15.0.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "micro": "^9.3.4"
+  }
+}

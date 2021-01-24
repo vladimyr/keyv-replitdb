@@ -8,6 +8,8 @@
 
 > [Repl.it Database](https://docs.repl.it/misc/database) storage adapter for [Keyv](https://github.com/lukechilds/keyv).
 
+[![run on repl.it](https://repl.it/badge/github/vladimyr/keyv-replitdb)](https://repl.it/github/vladimyr/keyv-replitdb)
+
 ## Install
 
 ```

@@ -19,8 +19,8 @@ npm install keyv keyv-replitdb
 ## Usage
 
 ```js
-const Keyv = require('keyv');
 const ReplitDbStore = require('keyv-replitdb');
+const Keyv = ReplitDbStore.extend(require('keyv'));
 
 const keyv = new Keyv({ store: new ReplitDbStore() });
 ```

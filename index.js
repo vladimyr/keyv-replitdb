@@ -72,6 +72,15 @@ class KeyvReplitDb {
       }, { concurrency }))
       .then(() => undefined);
   }
+
+  static extend(base) {
+    return class extends base {
+      list() {
+        const { store } = this.opts;
+        return store.list();
+      }
+    }
+  }
 }
 
 module.exports = KeyvReplitDb;

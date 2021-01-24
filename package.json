@@ -31,8 +31,8 @@
     "index.js"
   ],
   "scripts": {
+    "dev-api": "micro dev-api.js",
     "lint": "eslint .",
-    "proxy": "micro dev-api.js",
     "test": "ava"
   },
   "config": {
